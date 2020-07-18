@@ -10,15 +10,16 @@
         "url": "https://piecioshka.pl"
     },
     "scripts": {
-        "clear": "rm -rf dist/",
-        "clear:all": "rm -rf node_modules/ && npm run clear",
+        "clear:dist": "del /q/s/f dist && rmdir dist",
+        "clear:NM": "del /q/s/f node_modules && rmdir node_modules",
+        "clear:all": "npm run clear:dist && npm run clear:NM",
         "prebuild": "npm run clear",
         "build": "npm run build:development",
         "build:development": "webpack --config webpack/webpack.config.js",
-        "build:production": "webpack --config webpack/webpack.config.js --env.production",
+        "build:prod": "webpack --config webpack/webpack.config.js --env.production",
         "watch": "npm run build:development -- -w",
         "start": "http-server dist/ -c-1",
-        "dev": "webpack-dev-server --config webpack/webpack.config.js"
+        "dev": "webpack-dev-server --config webpack/webpack.config.js --open"
     },
     "devDependencies": {
         "@babel/core": "^7.10.2",
@@ -31,9 +32,5 @@
         "webpack-cli": "^3.3.11",
         "webpack-dev-server": "^3.11.0",
         "webpack-merge": "^4.2.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/piecioshka/boilerplate-webpack-babel"
     }
 }

@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 module.exports = (env) => {
     let config = {
         entry: {
-            main: path.join(root, 'src', 'main')
+            main: path.join(root, 'src', 'client', 'index')
         },
 
         output: {
