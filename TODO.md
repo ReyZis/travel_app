@@ -1,0 +1,9 @@
+- setup the webpack environment ``DONE``
+- setup the development mode
+- setup the server and make it work correctly
+- get the APIs that you need
+- make a successful call to all of them
+- retrive a data from each of them
+- display the result on the UI 
+- update the production mode
+- finnally make som minimizing for more efficiency 
