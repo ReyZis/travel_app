@@ -10,6 +10,7 @@
         "url": "https://piecioshka.pl"
     },
     "scripts": {
+        "test": "jest",
         "clear:dist": "del /q/s/f dist && rmdir dist",
         "clear:NM": "del /q/s/f node_modules && rmdir node_modules",
         "clear:all": "npm run clear:dist && npm run clear:NM",
@@ -29,6 +30,7 @@
         "file-loader": "^6.0.0",
         "html-loader": "^1.1.0",
         "http-server": "^0.12.3",
+        "jest": "^26.1.0",
         "sass": "^1.26.10",
         "sass-loader": "^9.0.2",
         "style-loader": "^1.2.1",
