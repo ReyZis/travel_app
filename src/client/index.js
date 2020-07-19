@@ -1,3 +1,5 @@
 import './view/index.html';
 
-alert('i am workig')
+import './style/style.scss'
+
+import img from './media/paris-placeholder.jpg'

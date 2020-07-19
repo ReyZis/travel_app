@@ -1,0 +1,80 @@
+$bold-family: 'Rowdies',
+cursive;
+$thin-family: 'Roboto',
+sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.header {
+    font-family: $thin-family;
+}
+
+.form-theme {
+    padding: 50px 20%;
+    background: #BDC3C7;
+    font: bold 4vw $bold-family;
+    .row {
+        margin: 10px;
+    }
+    .input-theme {
+        border: none;
+        border-bottom: 1px #D0D3D4 solid;
+        color: #fff;
+        font: bold 2vw/2rem $bold-family;
+        background: none;
+        padding-left: 10px;
+    }
+     ::-webkit-input-placeholder {
+        font: bold 2vw/2rem $bold-family;
+        color: #909497;
+    }
+    .submit-theme {
+        color: black;
+        border: 3px solid black;
+        background: white;
+        padding: 5px 15px;
+        font-family: $thin-family;
+    }
+}
+
+.trips-container {
+    background: #F5B7B1;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    grid-template-areas: 'image details' 'image button' 'image left-time' 'image weather';
+    .image-container {
+        grid-area: image;
+        background: url('../media/paris-placeholder.jpg') no-repeat right center;
+        background-size: cover;
+    }
+    .details-container {
+        grid-area: details;
+        font: bold 2vw/2rem $bold-family;
+    }
+    button {
+        grid-area: button;
+        border: 3px solid white;
+        background: none;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 15px;
+        font-family: $thin-family;
+    }
+    .left-time {
+        grid-area: left-time;
+        font-family: $thin-family;
+    }
+    .weather {
+        grid-area: weather;
+        font-family: $thin-family;
+    }
+}

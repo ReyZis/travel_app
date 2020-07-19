@@ -1,9 +1,12 @@
 - setup the webpack environment ``DONE``
-- setup the development mode
-- setup the server and make it work correctly
+- setup the development mode ``DONE``
+- build the UI interface for your project
+- setup jest and make the test functions
 - get the APIs that you need
+- make all the required fetch APIs
 - make a successful call to all of them
 - retrive a data from each of them
 - display the result on the UI 
+- setup the server and make it work correctly
 - update the production mode
 - finnally make som minimizing for more efficiency 
