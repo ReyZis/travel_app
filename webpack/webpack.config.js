@@ -6,13 +6,16 @@ const merge = require('webpack-merge');
 
 module.exports = (env) => {
     let config = {
-        entry: {
-            main: path.join(root, 'src', 'client', 'index')
-        },
+        entry: [
+            path.join(root, 'src', 'client', 'index'),
+            "@babel/polyfill",
+        ],
 
         output: {
             filename: 'bundle.js',
-            path: path.join(root, 'dist')
+            path: path.join(root, 'dist'),
+            libraryTarget: 'var',
+            library: 'Client'
         },
 
         module: {
@@ -31,9 +34,6 @@ module.exports = (env) => {
                 }
             ]
         },
-
-        plugins: [],
-
         devServer: {
             overlay: true,
         }
