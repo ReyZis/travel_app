@@ -6,11 +6,9 @@
 - setup jest and make the test functions ``DONE``
 ## APIs:
   - get the name of the city from the input and fetch the geoname to get the coords ``DONE``
-  - fetch the weatherbit API with the coords to egt the forecast weather
-  - fetch the Pixabay API withthe name to get the photos
-- make all the required fetch APIs
-- make a successful call to all of them
-- retrive a data from each of them
+  - fetch the weatherbit API with the coords to egt the forecast weather ``DONE``
+  - fetch the Pixabay API withthe name to get the photos ``DONE``
+- test all the function with jest
 - display the result on the UI 
 - setup the server and make it work correctly
 - update the production mode
