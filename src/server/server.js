@@ -45,7 +45,6 @@ app.post('/addEntry', addNewEntry);
 // Post Route
 function addNewEntry(req, res) {
     projectData.push(req.body)
-    console.log(projectData);
 }
 
 function sendProjectData(req, res) {

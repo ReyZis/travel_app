@@ -1,9 +1,10 @@
 'use strict';
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const path = require('path');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -44,5 +45,6 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css',
         }),
+        new WorkboxPlugin.GenerateSW()
     ]
 }

@@ -38,11 +38,10 @@ describe("testing the functions inside the async functions", () => {
         const data2 = await fetchPexabay("none-sense word");
         // Define the expected output, if any, in the form of variables/array
         const output1 = new RegExp('https://pixabay.com/get/');
-        const output2 = '../media/not-found.jpg';
         // The expect() function, in combination with a Jest matcher, is used to check if the function produces the expected output
         // The general syntax is `expect(myFunction(arg1, arg2, ...)).toEqual(expectedValue);y`, where `toEqual()` is a matcher
         // expect(data).toEqual({ Lat: "36.73225", Lng: "3.08746" })
         expect(data1).toMatch(output1);
-        expect(data2).toMatch(output2);
+        expect(data2).toBeDefined();
     })
 })
