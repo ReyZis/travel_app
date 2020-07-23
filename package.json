@@ -17,7 +17,7 @@
         "prebuild": "npm run clear",
         "build": "npm run build:development",
         "build:development": "webpack --config webpack/webpack.config.js",
-        "build:prod": "webpack --config webpack/webpack.config.js --env.production",
+        "prod": "webpack --config webpack/webpack.config.js --env.production",
         "watch": "npm run build:development -- -w",
         "start": "node src/server/server.js",
         "dev": "webpack-dev-server --config webpack/webpack.config.js --open"
@@ -37,9 +37,12 @@
         "html-webpack-plugin": "^4.3.0",
         "http-server": "^0.12.3",
         "jest": "^26.1.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
         "sass": "^1.26.10",
         "sass-loader": "^9.0.2",
         "style-loader": "^1.2.1",
+        "terser-webpack-plugin": "^3.0.7",
         "url-loader": "^4.1.0",
         "webpack": "^4.43.0",
         "webpack-bundle-analyzer": "^3.8.0",
@@ -48,6 +51,8 @@
         "webpack-merge": "^4.2.2"
     },
     "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "node-fetch": "^2.6.0"
     }

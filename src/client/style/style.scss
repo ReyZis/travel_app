@@ -43,7 +43,7 @@ sans-serif;
     }
 }
 
-.trips {
+#trips {
     .trip-container {
         background: #F5B7B1;
         padding: 20px;
@@ -55,8 +55,7 @@ sans-serif;
         grid-template-areas: 'image details' 'image button' 'image left-time' 'image weather';
         .image-container {
             grid-area: image;
-            background: url('../media/paris-placeholder.jpg') no-repeat right center;
-            background-size: cover;
+            overflow: hidden;
         }
         .details-container {
             grid-area: details;

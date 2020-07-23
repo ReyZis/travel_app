@@ -24,18 +24,12 @@ module.exports = (env) => {
                     exclude: /node_modules/,
                     use: 'babel-loader'
                 },
-                {
-                    test: /\.html$/,
-                    exclude: /node_modules/,
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                    },
-                }
+
             ]
         },
         devServer: {
             overlay: true,
+            contentBase: '../dist'
         }
     };
 
